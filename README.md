@@ -18,4 +18,4 @@ __Opencv__
 
 __VLM (Gemini)__
 1. Use ```corner_count``` and ```polygon_map_input_img.jpg``` (the image with nodes & labelled polygons) to generate a polygon ID - node ID mapping (```node_dict```) with a single Gemini call.
-2. In the second call, Gemini uses ```node_dict``` and ```labelled_polygon.jpg``` (image with colored & labelled polygons) to answer user queries about nodes of any polygon.
+2. In the second call, Gemini uses ```node_dict``` and ```labelled_polygon.jpg``` (image with colored & labelled polygons without nodes) to answer user queries about nodes of any polygon.
