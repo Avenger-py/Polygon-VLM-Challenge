@@ -7,3 +7,15 @@
 
 ## Output
 
+![image](https://github.com/user-attachments/assets/431dd5e0-b06d-451a-ae5c-452f4c9e5ae6)
+
+## Method
+
+__Opencv__ 
+1. Detect and approximate polygons, assign ID to each polygon, overlay the IDs on the polygon in both the images and save them. 
+2. Detect nodes/corners.  
+3. Calculate number of nodes (```corner_count```) per polygon using euclidean distance.
+
+__VLM (Gemini)__
+1. Use ```corner_count``` and the image with nodes (with labelled polygons) to generate a polygon ID to node number mapping ```node_dict``` with a single gemini call.
+2. In the second call, Gemini uses ```node_dict``` and image with colored & labelled polygons to answer user queries about nodes of any polygon.
